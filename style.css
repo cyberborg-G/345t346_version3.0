@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* Light text */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+#remaining-tasks {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #D1D1D6;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.btn {
+    background-color: #515151;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #252525;
+}
+
+.btn-error {
+    background-color: #FF3B30;
+}
+
+.btn-success {
+    background-color: #28CD41;
+}
+.button-group {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+.todos-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-filter {
+    margin: 0 10px;
+}
+
+/* Todos List */
+.todos-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item p {
+    max-width: 60%; /* Limit the width of the task title to 60% of the list item */
+    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+    margin: 0; /* Remove default margin */
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(255, 159, 10);
+    border: 1px solid rgb(255, 159, 10); 
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Ensure that the content wraps if needed */
+}
+
+.todo-item button {
+    margin-left: 10px;
+    flex-shrink: 0; /* Ensure buttons don't shrink */
+}
+
+/* Style for completed todos */
+.todo-item.completed {
+    background-color: lightgrey;  /* Light grey background for completed tasks */
+    border-color: lightgrey;      /* Matching border color for consistency */
+}
+
+.todo-item.completed p {
+    text-decoration: line-through;
+    opacity: 0.6;                /* Reduced opacity for completed task text */
+}
+
+.todo-checkbox {
+    margin-right: 20px;
+    width: 25px;  /* Increase the width */
+    height: 25px; /* Increase the height */
+    transform: scale(1.5); /* Enlarge the checkbox */
+    accent-color: green; /* Optional: Change checkbox color */
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgb(134, 134, 134);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-content > * {
+    margin-bottom: 15px; /* Adjust spacing as needed */
+}
+
+.button-group {
+    display: flex;
+    gap: 20px; /* Adjust the gap between buttons */
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+}

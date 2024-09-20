@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✅TodoMuse </h1>
+            <p id="remaining-tasks">Remaining tasks: 0</p>
+            <div class="input-section">
+                <input id="todo-input" type="text" placeholder="Add your task..." class="input" />
+                <button id="add-button" class="btn btn-add">Add</button>
+            </div>
+        </header>
+        <div class="todos-filter">
+            <button id="filter-all" class="btn btn-filter">All</button>
+            <button id="filter-completed" class="btn btn-filter">Completed</button>
+            <button id="filter-remaining" class="btn btn-filter">Remaining</button>
+        </div>
+        <ul id="all-todos" class="todos-list"></ul>
+        <div id="edit-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Edit Task</h2>
+                <input id="edit-todo-input" type="text" class="input" placeholder="Edit your task..." />
+                <textarea id="edit-note-input" class="note-input" placeholder="Add extra notes..."></textarea>
+                <input id="edit-deadline-input" type="date" class="input" />
+                <div class="recording-controls">
+                    <button id="start-recording" class="btn">Start Voice Recording</button>
+                    <button id="stop-recording" class="btn hidden">Stop Voice Recording</button>
+                </div>
+                <input type="file" id="image-upload" accept="image/*" />
+                <div class="button-group">
+                    <button id="save-button" class="btn btn-success">Save</button>
+                    <button id="close-modal" class="btn btn-error">X</button>
+                </div>
+                <div id="recorded-audio"></div> <!-- To show recorded audio -->
+            </div>
+        </div>
+        
+        
+        <footer>
+            <p>( Version 3.0 )</p>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+
